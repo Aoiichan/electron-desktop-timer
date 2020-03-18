@@ -1,0 +1,15 @@
+{
+  "name": "electronapp",
+  "version": "0.0.0",
+  "description": "Electron.ElectronApp",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "electron": "8.1.1"
+  }
+}

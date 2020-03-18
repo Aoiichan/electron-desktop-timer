@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "electronApp", "electronApp.njsproj", "{1478A41A-5A32-4E3B-B618-C377F8A851E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1478A41A-5A32-4E3B-B618-C377F8A851E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1478A41A-5A32-4E3B-B618-C377F8A851E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1478A41A-5A32-4E3B-B618-C377F8A851E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1478A41A-5A32-4E3B-B618-C377F8A851E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB48DD01-44F0-44CF-B1B1-220B1ADF3A59}
+	EndGlobalSection
+EndGlobal
