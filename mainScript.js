@@ -5,6 +5,9 @@ console.log(document);
 var allTimers = [];
 
 
+document.getElementById("newTimerButton").addEventListener("click", newTimer);
+
+
 class timer {
 	constructor(time, color, name) {
 		self.alarmTime = time;
@@ -15,7 +18,15 @@ class timer {
 
 }
 
+function newTimer() {
+	let alarmTimeInMin = document.getElementById("timerTime").value;
+	let alarmName = document.getElementById("timerName").value;
+	let alarmColor = document.getElementById("timerColor").value;
 
+	console.log(alarmTimeInMin);
+	console.log(alarmName);
+	console.log(alarmColor);
+}
 function writeTimers() {
 
 }

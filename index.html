@@ -1,16 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-		<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-		<title>Init page</title>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+	<title>Init page</title>
+</head>
 	<body>
 		<h1> - insert title - </h1>
-
-		<!-- You can also require other files to run in this process -->
+		<form>
+			New timer: <input type="text" value="Timer name" required id="timerName"/>, in <input type="number" value="1" id="timerTime"/>minutes, color: <input type="color" value="#FFAAAA" id="timerColor"/>
+		</form> &nbsp;&nbsp;&nbsp;&nbsp; <button id="newTimerButton">Create</button>
 		<div>
 			<!-- <img src="./miku.jpg" alt="miku"/> -->
 			<p id="yeet"></p>
