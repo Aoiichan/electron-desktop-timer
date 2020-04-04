@@ -11,7 +11,7 @@ document.getElementById("newTimerButton").addEventListener("click", newTimer);
 function newTimer() {
 	allTimers.push({
 		time: new Date(document.getElementById("timerTime").value * 60000), //This will keep track of when the alarm should ring (will have a small epoch value)
-		alarmTime: Date.now() + document.getElementById("timerTime").value * 60000, //This stores the timestamp of the time when the alarm should ring
+		alarmTime: new Date( Date.now() + document.getElementById("timerTime").value * 60000), //This stores the timestamp of the time when the alarm should ring
 		origTime: new Date(new Date(document.getElementById("timerTime").value * 60000) - Date.now()), //Used to tell what the original time was upon alarm expiry
 		name: document.getElementById("timerName").value,
 		color: document.getElementById("timerColor").value
@@ -22,13 +22,16 @@ function newTimer() {
 function refreshTimers() {
 	allTimers.forEach(timer => {
 		timer.time = new Date(timer.alarmTime - Date.now());
+
 		if (timer.time < 0) {
 			expiredTimers.push(timer);
 			let notif = new Notification("Expired timer: " + timer.name, {
-				body: "The timer named " + timer.name + " (for " +  stringTime(timer.origTime) +") has expired."
+				body: "The timer named " + timer.name + " (for " + stringTime(timer.origTime) + ") has expired."
+			
 			})
 			delete (notif);
 			allTimers.splice(allTimers.indexOf(timer), 1);
+			writeExpiredTimers();
 		}
 	})
 }
@@ -68,6 +71,14 @@ function writeTimers() {
 		button.addEventListener("click", function () { deleteTimer(button) })
 	})
 	
+}
+
+function writeExpiredTimers() {
+	expiredTimers.forEach(timer => {
+		let newDeletedTimer = document.getElementById("expiredTimersDiv").insertBefore(document.createElement("div"), document.getElementById("expiredTimersDiv").childNodes[1]);
+		newDeletedTimer.innerHTML = "Timer <em>" + timer.name + "</em>, expired at: " + timer.alarmTime.getHours() + ":" + timer.alarmTime.getMinutes() + ":" + timer.alarmTime.getSeconds()
+		expiredTimers.splice(expiredTimers.indexOf(timer), 1);
+	})
 }
 /*
 let myNotification = new Notification('Title', {

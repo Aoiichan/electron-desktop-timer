@@ -1,13 +1,13 @@
 {
-  "name": "electronapp",
-  "version": "0.0.0",
-  "description": "Electron.ElectronApp",
+  "name": "desktoptimers",
+  "version": "1.0.0",
+  "description": "Small electron-based desktop timer application",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
   "author": {
-    "name": ""
+    "name": "Evelina S.; github @aoiichan"
   },
   "dependencies": {
     "electron": "^8.1.1"

@@ -5,30 +5,29 @@
 	<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
 	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
 	<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-	<!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
-	<title>Init page</title>
+	<title>Desktop timers</title>
+	
+	<link rel="stylesheet" href="mainStyles.css">
 </head>
 <body>
-	<h1> - insert title - </h1>
+	<h2>New timer:</h2>
 	<form>
-		New timer: <input type="text" value="Timer name" required id="timerName" /><br />
-		For time in minutes: <input type="number" value="1" id="timerTime" style="float:right;"/><br />
+		Timer name: <input type="text" value="" required id="timerName" /><br />
+		For time in minutes: <input type="number" value="1" id="timerTime" style="float:right;" /><br />
 		color: <input type="color" value="#FFAAAA" id="timerColor" /><br />
 	</form><br /><button id="newTimerButton">Create</button>
 	<div class="title">
-		<p id="yeet"></p>
+		<h2>Currently active timers:</h2>
 	</div>
+	
 	<div id="timerDiv"></div>
-
-
-
-
-	<!--
-	<div id="timerTemplate">
-		<div class="timerCountdown" style="display:inline;">insert image</div>
-		<div class="timerName" style="display:inline;"> This is the timer name</div>
+	
+	<div class="title">
+		<h2>Expired Timers:</h2>
 	</div>
-	-->
+	<div id="expiredTimersDiv"></div>
+
+
 
 
 

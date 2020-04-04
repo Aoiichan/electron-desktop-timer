@@ -1,0 +1,19 @@
+body {
+	background-color: lightcyan;
+	font-family: sans-serif;
+}
+
+h2{
+	color: darkred;
+}
+em{
+	text-emphasis-style: circle;	
+}
+
+.timer{
+	border-radius: 0.2em;
+	padding: 0.1em;
+	border-style: groove;
+	border-color: lightblue;
+}
+
