@@ -8,7 +8,7 @@ You can create a timer for x amount of minutes (decimals are supported), with a 
 You must have node.js installed on your local machine, and npm added in your path.<br>
 1. Clone the repo to your local drive <br>
 2. run `npm install` inside the repository root folder<br>
-3. Start the program with `npm start`
+3. Start the program with `npm start`. The batch file/shortcut is set to run this command.
 
 
 
