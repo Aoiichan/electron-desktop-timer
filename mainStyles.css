@@ -17,3 +17,14 @@ em{
 	border-color: lightblue;
 }
 
+#expiredTimersDiv {
+	color: darkgray;
+
+}
+
+#expiredTimersDiv div {
+	border-radius: 0.2em;
+	padding: 0.1em;
+	border-style: groove;
+	border-color: lightblue;
+}
