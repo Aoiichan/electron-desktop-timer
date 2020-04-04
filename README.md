@@ -2,7 +2,13 @@
 
 This is a small desktop timer application built using the electron framework, in html, css and javascript. Built as a final project for a web development course.<br>
 You can create a timer for x amount of minutes (decimals are supported), with a specific name and color. You will get alerted by a desktop notification when the timer expires. Both current and expired times are shown in the app.<br>
-The app can be executed with the shortcut, should not require any additional programs beside the project files.
+
+
+# Installation instructions
+You must have node.js installed on your local machine, and npm added in your path.<br>
+1. Clone the repo to your local drive <br>
+2. run `npm install` inside the repository root folder<br>
+3. Start the program with `npm start`
 
 
 
