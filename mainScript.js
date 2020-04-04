@@ -10,7 +10,7 @@ function newTimer() { //this gets called when
 	allTimers.push({
 		time: new Date(document.getElementById("timerTime").value * 60000), //This will keep track of when the alarm should ring (will have a small epoch value), this property WILL be changed
 		alarmTime: new Date( Date.now() + document.getElementById("timerTime").value * 60000), //This stores the timestamp of the time when the alarm should ring, property will NOT be changed
-		origTime: new Date(new Date(document.getElementById("timerTime").value * 60000) - Date.now()), //Used to tell what the original time was upon alarm expiry
+		origTime: new Date(document.getElementById("timerTime").value * 60000), //Used to tell what the original time was upon alarm expiry
 		name: document.getElementById("timerName").value,
 		color: document.getElementById("timerColor").value
 	});
@@ -28,7 +28,7 @@ function refreshTimers() {
 		if (timer.time < 0) {
 			expiredTimers.push(timer);
 			let notif = new Notification("Expired timer: " + timer.name, {
-				body: "The timer named " + timer.name + " (for " + stringTime(timer.origTime) + ") has expired."
+				body: "The timer named " + timer.name + " (for" + stringTime(timer.origTime) + ") has expired."
 			
 			})
 			delete (notif);
@@ -79,7 +79,7 @@ function writeExpiredTimers() {
 	//Appends a new expired timer to the beginning of the expiredTimers div, this gets called by refreshTimers()
 	expiredTimers.forEach(timer => {
 		let newDeletedTimer = document.getElementById("expiredTimersDiv").insertBefore(document.createElement("div"), document.getElementById("expiredTimersDiv").childNodes[0]);
-		newDeletedTimer.innerHTML = "Timer <em>" + timer.name + "</em>, expired at: " + timer.origTime.getHours() + ":" + timer.alarmTime.getMinutes() + ":" + timer.alarmTime.getSeconds()
+		newDeletedTimer.innerHTML = "Timer <em>" + timer.name + "</em>, expired at: " + timer.alarmTime.getHours() + ":" + timer.alarmTime.getMinutes() + ":" + timer.alarmTime.getSeconds()
 		expiredTimers.splice(expiredTimers.indexOf(timer), 1);
 	})
 }
