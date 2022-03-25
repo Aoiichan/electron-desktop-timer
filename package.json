@@ -10,6 +10,6 @@
     "name": "Evelina S.; github @aoiichan"
   },
   "dependencies": {
-    "electron": "^8.2.4"
+    "electron": "^13.6.6"
   }
 }
